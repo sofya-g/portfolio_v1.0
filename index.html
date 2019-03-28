@@ -5,17 +5,146 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+<script>
+ $(document).ready(function(){
+  $("#aboutme").click(function(){
+    $("#info").slideToggle("slow");
+  });
+  $(".btn").click(function(){
+    $(".gallery-block").slideToggle("slow");
+  });
+});
+
+</script>
+
     <style>
 
 .jumbotron {
-  /*background-image: "../Images/background.jpg";
-  background-size:cover;*/
-  background-color:white;
+background-size:cover;
+margin-bottom: 0px;
+ }
 
-}
 h1 {
   text-align: center;
+  margin-top: 60px;
+  color: white;
 
+}
+
+body {
+
+  height:100%;
+    margin:0;
+    padding:0;
+}
+
+.container-fluid {
+    margin-top:110px;
+  }
+
+.btn {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+#aboutme, #info {
+
+  padding: 5px;
+  text-align:center; 
+}
+
+#aboutme {
+color: lightgray;
+
+}
+
+#info {
+  display: none;
+  color:lightgray;
+}
+
+.gallery-block{
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.gallery-block .heading{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.gallery-block .heading h2{
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.gallery-block.compact-gallery .item{
+  overflow: hidden;
+  margin-bottom: 0;
+  background: black;
+  opacity: 1;
+}
+
+.gallery-block.compact-gallery .item .image{
+  transition: 0.8s ease;
+}
+
+.gallery-block.compact-gallery .item .info{
+  position: relative;
+    display: inline-block;
+}
+
+.gallery-block.compact-gallery .item .description{
+  display: grid;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    padding: 10px;
+    font-size: 17px;
+    line-height: 18px;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    opacity: 1;
+    color: #fff;
+    transition: 0.8s ease;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.39));
+}
+
+.gallery-block.compact-gallery .item .description .description-heading{
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.gallery-block.compact-gallery .item .description .description-body{
+  font-size: 0.8em;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+@media (min-width: 576px) {
+
+  .gallery-block.compact-gallery .item .description {
+    opacity: 0; 
+  }
+
+  .gallery-block.compact-gallery .item a:hover .description {
+    opacity: 1; 
+  } 
+
+  .gallery-block .zoom-on-hover:hover .image {
+    transform: scale(1.3);
+    opacity: 0.7; 
+  }
 }
 
     </style>
@@ -26,28 +155,125 @@ h1 {
 
 <body>
 
-   <div class=jumbotron>
+   <div class=jumbotron style="background-image: url(../images/background.jpg)">
       <h1> Sofya Grishkova</h1>
+      <br>
+      <div id="aboutme">about me</div>
+      <div id="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        <br>
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+      <br>
+    </div>
 
+
+  
+<div class=container-fluid>
+  <div class="row justify-content-center">
+    <div class="col-lg-3 col-md-2 col-sm-4 col-10"> <button type="button" class="btn btn-lg btn-outline-dark btn-block">web</button> </div>
+    
+    <div class="col-lg-3 col-md-2 col-sm-4 col-10"> <button type="button" class="btn btn-lg btn-outline-dark btn-block">print</button> </div>
   </div>
 
+  <div class="row justify-content-center">
+    <div class="col-lg-3 col-md-2 col-sm-4 col-10"> <button type="button" class="btn btn-lg btn-outline-dark btn-block">sketches</button> </div>
+    <div class="col-lg-3 col-md-2 col-sm-4 col-10"> <button type="button" class="btn btn-lg btn-outline-dark btn-block">cv</button> </div>
+  </div>
 
-  <div class="row">
-    <div class="col-lg-2 col-md-2 col-sm-4 col-10"> <button type="button" class="btn btn-lg btn-outline-dark btn-block">web</button> </div>
-    <div class="col-lg-2 col-md-2 col-sm-4 col-10"> <button type="button" class="btn btn-lg btn-outline-dark btn-block">print</button> </div>
 </div>
 
 
-  <div class="row">
-    <div class="col-lg-2 col-md-2 col-sm-4 col-10"> <button type="button" class="btn btn-lg btn-outline-dark btn-block">sketches</button> </div>
-    <div class="col-lg-2 col-md-2 col-sm-4 col-10"> <button type="button" class="btn btn-lg btn-outline-dark btn-block">about me</button> </div>
- </div>
 
-
-
-
-
-
+    <section class="gallery-block compact-gallery">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="../images/ParadiseBay_480x320.jpg">
+                        <img class="img-fluid image" src="../images/ParadiseBay_480x320.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="../img/UnderworldFM_en_m_JPG_FootBall_768x1024.jpg">
+                        <img class="img-fluid image" src="../img/UnderworldFM_en_m_JPG_FootBall_768x1024.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="../img/WANT_ru_i_JPG_Shopping_320x480.jpg">
+                        <img class="img-fluid image" src="../img/WANT_ru_i_JPG_Shopping_320x480.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="../img/image4.jpg">
+                        <img class="img-fluid image" src="../img/image4.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                        </a>
+                    </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="../img/image5.jpg">
+                        <img class="img-fluid image" src="../img/image5.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="../img/image6.jpg">
+                        <img class="img-fluid image" src="../img/image6.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="../img/image7.jpg">
+                        <img class="img-fluid image" src="../img/image7.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="../img/image8.jpg">
+                        <img class="img-fluid image" src="../img/image8.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="../img/image9.jpg">
+                        <img class="img-fluid image" src="../img/image9.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.compact-gallery', { animation: 'slideIn'});
+    </script>
 
 
 
@@ -58,7 +284,8 @@ h1 {
 
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
