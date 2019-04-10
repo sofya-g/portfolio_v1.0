@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Gallery</title>
+<meta charset="utf-8">
+<meta name="viewport">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+<script>
+
+function myFunctionHome() {
+    location.href="index.html"
+    }
+
+</script>
+
+<style>
+
+    h1 {
+        font-size: 2rem;
+        font-family: optima;
+        margin-top: 0px;
+        margin-bottom:70px;
+        text-align: center;
+    }
+/*---------------------------------flexbox gallery--------------------------------------------*/
+
+    .row {
+        display:flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+        background-color: black;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+
+    .column {
+        max-width: 25%;
+        flex: 25%;
+        padding: 0 4px;
+    }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+    }
+
+    @media screen and (max-width: 800px) {
+    
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+        }
+    }
+
+/* --------------------home button---------------------*/
+
+    p {
+        list-style: none;
+        margin: 10px 5px;
+        display: inline-block;
+        font-size: 20px;
+        padding: 10px 10px;
+        color: slategray;
+        transition:.5s;
+        font-size: 30px;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-top: 5px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    p:hover {
+        color:lightgray;
+        transition: .5s;
+    }
+
+    /* ----------------------nav buttons----------------------*/
+
+    a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+    a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+    .previous {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+    .next {
+        background-color: #f1f1f1;
+    color: black;
+}
+
+    .round {
+    border-radius: 50%;
+}
+
+    .float-right {
+    margin-top:17px;
+}
+
+</style>
+</head>
+
+<body>
+
+        <div class="container">
+                <p><i onclick="myFunctionHome()" class="fa fa-home"></i></p>
+                    <div class="float-right">
+                        <a href="gallery_print.html" class="previous round ">&#8249;</a>
+                        <a href="gallery_web.html" class="next round">&#8250;</a>
+                    </div>
+            </div>
+        
+        <br> <br>
+
+    <h1>Sketches</h1>
+
+
+    <div class="row justify-content-center">
+        <div class="column">
+            <img src="../images/forest.jpg" style="width:100%">
+            <img src="../images/butterflies.jpg" style="width:100%">
+            <img src="../images/horse.jpg" style="width:100%">
+            <img src="../images/horse.jpg" style="width:100%">
+    </div>
+
+        <div class="column">
+            <img src="../images/butterflies.jpg" style="width:100%">
+            <img src="../images/flowers.jpg" style="width:100%">
+            <img src="../images/forest.jpg" style="width:100%">
+    </div>
+
+        <div class="column">
+            <img src="../images/flowers.jpg" style="width:100%">
+            <img src="../images/butterflies.jpg" style="width:100%">
+            <img src="../images/butterflies.jpg" style="width:100%">
+    </div>
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
